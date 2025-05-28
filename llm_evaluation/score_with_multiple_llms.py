@@ -165,7 +165,7 @@ def main():
     args = parser.parse_args()
 
     # derive input path from bias
-    input_path = os.path.join("data", f"{args.bias}_grouped_human_annotations.json")
+    input_path = os.path.join("human_annotation_data", f"{args.bias}_grouped_human_annotations.json")
     with open(input_path, "r", encoding="utf-8") as f:
         examples = json.load(f)
 
