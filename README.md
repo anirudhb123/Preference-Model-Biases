@@ -1,21 +1,32 @@
 ## Pipeline:
 
 
-### Fine-Tuning to Mitigate Particular Bias
+### Data Preparation
 
 1. Generate baseline responses given queries (```main/bash_scripts/run_base.sh```)
 2. Generate perturbations for bias (```main/bash_scripts/run_perturbed.sh```)
 3. Label training data subset with occurrences of bias (```main/bash_scripts/run_data_labeling.sh```)
-4. Generate 750 counterfactuals from this subset as examples for fine tuning (```main/bash_scripts/run_counterfactual_generation.sh```)
-5. In the proportion they appear in the labeled training data subset, sample+label examples from chatbot arena and use them as the additional 250 examples for fine tuning (```main/bash_scripts/run_chatblot_labeling.sh```)
-6. Fine tune your choice of model using 1000 examples (```main/bash_scripts/run_fine_tuning.sh```)
+4. Generate counterfactuals from this subset as examples for fine tuning (```main/bash_scripts/run_counterfactual_generation.sh```)
+5. (OPTIONAL) In the proportion they appear in the labeled training data subset, sample and label examples from chatbot arena (```main/bash_scripts/run_chatblot_labeling.sh```)
+
+### Fine-Tuning
+
+#### Mitigating Single Bias
+
+1. Fine tune your choice of model using examples collected in steps 4 and (optionally) 5 (```main/bash_scripts/run_fine_tuning.sh```)
+
+#### Mitigating Multiple Biases
+
+1. Fine tune your choice of model using examples collected in steps 1 and (optionally) 2 (```main/bash_scripts/run_fine_tuning_multiple.sh```)
 
 
 ### Evaluation of Fine-Tuned Model
 
-1. Rewardbench evaluation (```main/bash_scripts/run_rewardbench_eval.sh```)
+1. Rewardbench evaluation (```main/bash_scripts/run_rewardbench_eval.sh``` or ```main/bash_scripts/run_rewardbench_eval_multiple.sh```)
+    
     a. Check output file for results
-2. Score perturbed examples (```main/bash_scripts/run_fine_tuned_rm.sh```) 
+
+2. Score perturbed examples (```main/bash_scripts/run_fine_tuned_rm.sh``` or ```main/bash_scripts/run_fine_tuned_rm_multiple.sh```) 
 
 
 ## Bash Scripts
