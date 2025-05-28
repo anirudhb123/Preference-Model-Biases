@@ -23,15 +23,16 @@
 
 Brief overview of each script in this directory:
 
-| Script                             |                   Description                                                            |
-|------------------------------------|------------------------------------------------------------------------------------------|
-| `main/bash_scripts/run_base.sh`                      | *(Not used currently)*                                                 |
-| `main/bash_scripts/run_chatbot_labeling.sh`          | Selects examples from Chatbot Arena for fine-tuning (with counterfactual examples). |
-| `main/bash_scripts/run_counterfactual_generation.sh` | Generates counterfactual examples to probe for bias.                   |
-| `main/bash_scripts/run_data_labeling.sh`             | Labels training examples for the presence of bias.                     |
-| `main/bash_scripts/run_fine_tuning.sh`               | Fine-tunes the reward model on generated counterfactuals.              |
-| `main/bash_scripts/run_fine_tuned_rm.sh`             | Scores perturbed inputs using the fine-tuned reward model.             |
-| `main/bash_scripts/run_perturbed.sh`                 | Generate perturbations for a particular bias (modify prompt in `generate_perturbed_responses.py` if using RATE).                        |
-| `main/bash_scripts/run_rewardbench_eval.sh`          | Computes evaluation metrics on the RewardBench benchmark.              |
-| `main/bash_scripts/run_rewardbench_labeling.sh`      | *(Not used currently; reserved for future RewardBench labeling)*       |
-| `main/bash_scripts/run_rm.sh`                        | Runs the base (un-fine-tuned) reward model on a set of prompts.        |
+| Script                                           | Description                                                                                                                 |
+|--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| `main/bash_scripts/run_base.sh`                  | *(Not used currently)*                                                                                                      |
+| `main/bash_scripts/run_chatbot_labeling.sh`      | Selects examples from Chatbot Arena for fine-tuning (with counterfactual examples).                                         |
+| `main/bash_scripts/run_counterfactual_generation.sh` | Generates counterfactual examples to probe for bias.                                                                     |
+| `main/bash_scripts/run_data_labeling.sh`         | Labels training examples for the presence of bias.                                                                          |
+| `main/bash_scripts/run_fine_tuning.sh`           | Fine-tunes the reward model on generated counterfactuals.                                                                   |
+| `main/bash_scripts/run_fine_tuned_rm.sh`         | Scores perturbed inputs using the fine-tuned reward model.                                                                  |
+| `main/bash_scripts/run_perturbed.sh`             | Generates perturbations for a particular bias (modify prompt in `generate_perturbed_responses.py` if using RATE).          |
+| `main/bash_scripts/run_rewardbench_eval.sh`      | Computes evaluation metrics on the RewardBench benchmark.                                                                   |
+| `main/bash_scripts/run_rewardbench_eval_multiple.sh` | Computes evaluation metrics on the RewardBench benchmark for model mitigating multiple biases.                                 |
+| `main/bash_scripts/run_fine_tuned_rm_multiple.sh`   | Scores perturbed inputs using multiple fine-tuned reward model variants.                                                  |
+| `main/bash_scripts/run_fine_tuning_multiple.sh`     | Fine-tunes the reward model across multiple bias settings generated counterfactuals across multiple biases.                                                   |
