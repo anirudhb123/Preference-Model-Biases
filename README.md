@@ -24,7 +24,7 @@
 
 1. Rewardbench evaluation (```main/bash_scripts/run_rewardbench_eval.sh``` or ```main/bash_scripts/run_rewardbench_eval_multiple.sh```)
     
-    a. Check output file for results
+    a. Check output file (outputted to `data/rewardbench_results`) for results
 
 2. Score perturbed examples (```main/bash_scripts/run_fine_tuned_rm.sh``` or ```main/bash_scripts/run_fine_tuned_rm_multiple.sh```) 
 
