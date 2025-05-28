@@ -3,11 +3,12 @@
 
 ### Fine-Tuning to Mitigate Particular Bias
 
-1. Generate perturbations for bias (```main/bash_scripts/run_perturbed.sh```)
-2. Label training data subset with occurrences of bias (```main/bash_scripts/run_data_labeling.sh```)
-3. Generate 750 counterfactuals from this subset as examples for fine tuning (```main/bash_scripts/run_counterfactual_generation.sh```)
-4. In the proportion they appear in the labeled training data subset, sample+label examples from chatbot arena and use them as the additional 250 examples for fine tuning (```main/bash_scripts/run_chatblot_labeling.sh```)
-5. Fine tune your choice of model using 1000 examples (```main/bash_scripts/run_fine_tuning.sh```)
+1. Generate baseline responses given queries (```main/bash_scripts/run_base.sh```)
+2. Generate perturbations for bias (```main/bash_scripts/run_perturbed.sh```)
+3. Label training data subset with occurrences of bias (```main/bash_scripts/run_data_labeling.sh```)
+4. Generate 750 counterfactuals from this subset as examples for fine tuning (```main/bash_scripts/run_counterfactual_generation.sh```)
+5. In the proportion they appear in the labeled training data subset, sample+label examples from chatbot arena and use them as the additional 250 examples for fine tuning (```main/bash_scripts/run_chatblot_labeling.sh```)
+6. Fine tune your choice of model using 1000 examples (```main/bash_scripts/run_fine_tuning.sh```)
 
 
 ### Evaluation of Fine-Tuned Model
