@@ -25,7 +25,7 @@ Brief overview of each script in this directory:
 
 | Script                                           | Description                                                                                                                 |
 |--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| `main/bash_scripts/run_base.sh`                  | *(Not used currently)*                                                                                                      |
+| `main/bash_scripts/run_base.sh`                  | Generate baseline responses given queries.                                                                                                      |
 | `main/bash_scripts/run_chatbot_labeling.sh`      | Selects examples from Chatbot Arena for fine-tuning (with counterfactual examples).                                         |
 | `main/bash_scripts/run_counterfactual_generation.sh` | Generates counterfactual examples to probe for bias.                                                                     |
 | `main/bash_scripts/run_data_labeling.sh`         | Labels training examples for the presence of bias.                                                                          |
