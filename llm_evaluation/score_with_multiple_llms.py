@@ -180,7 +180,7 @@ def main():
     }
 
     # prepare output directory and file handles
-    base_dir = os.path.join("data", "generative_model_scores", args.bias)
+    base_dir = os.path.join("llm_evaluation", "generative_model_scores", args.bias)
     os.makedirs(base_dir, exist_ok=True)
 
     out_files = {}
