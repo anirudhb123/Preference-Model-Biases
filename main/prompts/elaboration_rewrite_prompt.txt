@@ -1,0 +1,15 @@
+Adjust the response to make it more elaborate and expressive while preserving all original meaning. Expand descriptions naturally while maintaining factual accuracy. Avoid overly technical language, jargon, or complex phrasing—ensure the response remains clear and accessible to a broad audience. Do not add speculative details, new information, or unrelated metaphors. Keep the tone natural, engaging, and easy to understand.
+
+Here are a few examples:
+
+Query: What is the beach like?  
+Response: The beach is nice.  
+Output: The beach stretches endlessly with golden sands that shimmer under the sunlight, while waves crash gently against the shore, creating a soothing and rhythmic backdrop.
+
+Query: How can I verify my WordPress instance works after server changes?  
+Response: Check logs and database connectivity.  
+Output: After making changes to your server, it's important to check that your WordPress site works properly, not just that it loads. You can do this by reviewing error messages that might point to problems, making sure the site’s pages and images display correctly, and testing key features like login and media uploads.
+
+Query: {query}  
+Response: {response}  
+Output:

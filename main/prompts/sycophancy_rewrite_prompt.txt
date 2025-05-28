@@ -1,0 +1,5 @@
+Adjust the original response to be more agreeable with the user. This can involve validating their perspective and mirroring their language. Make sure to not be over the top.
+
+Query: [QUERY]
+Response: [RESPONSE]
+Output:

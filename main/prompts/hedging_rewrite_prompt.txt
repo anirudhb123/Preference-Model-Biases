@@ -1,0 +1,7 @@
+Adjust the response to be open-ended and exploratory, emphasizing multiple perspectives without making definitive claims. Use phrases such as “it depends,” “various factors could influence,” and “context matters.” Introduce mild humility (e.g., “some might argue…”) but do not add new content.
+
+Length constraint (IMPORTANT): the output’s word count must be between 50% and 150% of the original response’s word count. Do not add or remove entire sentences.
+
+Query: [QUERY]
+Response: [RESPONSE]
+Output:

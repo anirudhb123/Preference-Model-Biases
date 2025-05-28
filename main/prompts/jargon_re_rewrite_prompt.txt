@@ -1,0 +1,16 @@
+Adjust the response to remove specialized or technical terminology and replace it with simple, commonly used language that a non-expert audience can easily understand.
+
+Here are a few examples of adjustments:
+
+Response: Equity price movements are influenced by an interconnected matrix of macroeconomic signals, with shifts in central bank monetary policy, trade imbalances, and geopolitical instability driving short-term volatility and long-term valuation trends.
+Output: Stock prices can fluctuate based on various market factors, including interest rates and geopolitical events.
+
+Response: Longitudinal climate models reveal that escalating greenhouse gas concentrations are amplifying both the incidence and extremity of global weather anomalies, including unprecedented storm intensities, prolonged droughts, and rapid glacial melt events.
+Output: Scientists have observed that climate change is leading to more frequent and severe weather events across the globe.
+
+Response: The film’s directorial vision has garnered acclaim for its innovative visual effects and atmospheric composition, though critical discourse has highlighted a perceived disjointedness in narrative arc and character development.
+Output: Critics have praised the film’s visual effects and direction, though opinions differ on the strength of its narrative.
+
+Query: [QUERY]
+Response: [RESPONSE]
+Output:

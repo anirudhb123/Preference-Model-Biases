@@ -1,0 +1,145 @@
+/mnt/nlpgridio3/data/anirudh2/venv/lib/python3.12/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2025-04-29 16:06:37 - INFO - __main__ - Loading model: Ray2333/GRM-gemma2-2B-rewardmodel-ft
+[INFO|configuration_utils.py:699] 2025-04-29 16:06:37,416 >> loading configuration file config.json from cache at /nlp/data/huggingface_cache/models--Ray2333--GRM-gemma2-2B-rewardmodel-ft/snapshots/6a6e503f3c03a88e92c34c4e6860045eb88ec6e9/config.json
+[INFO|configuration_utils.py:771] 2025-04-29 16:06:37,422 >> Model config Gemma2Config {
+  "architectures": [
+    "Gemma2ForSequenceClassification"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "attn_logit_softcapping": 50.0,
+  "bos_token_id": 2,
+  "cache_implementation": "hybrid",
+  "eos_token_id": [
+    1,
+    107
+  ],
+  "final_logit_softcapping": 30.0,
+  "head_dim": 256,
+  "hidden_act": "gelu_pytorch_tanh",
+  "hidden_activation": "gelu_pytorch_tanh",
+  "hidden_size": 2304,
+  "id2label": {
+    "0": "LABEL_0"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 9216,
+  "label2id": {
+    "LABEL_0": 0
+  },
+  "max_position_embeddings": 8192,
+  "model_type": "gemma2",
+  "num_attention_heads": 8,
+  "num_hidden_layers": 26,
+  "num_key_value_heads": 4,
+  "pad_token_id": 1,
+  "query_pre_attn_scalar": 256,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 10000.0,
+  "sliding_window": 4096,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.50.3",
+  "use_cache": true,
+  "vhead_layer_type": "mlp",
+  "vhead_num_layers": 1,
+  "vhead_num_neurons": 1024,
+  "vocab_size": 256000
+}
+
+[INFO|modeling_utils.py:1154] 2025-04-29 16:06:38,092 >> loading weights file model.safetensors from cache at /nlp/data/huggingface_cache/models--Ray2333--GRM-gemma2-2B-rewardmodel-ft/snapshots/6a6e503f3c03a88e92c34c4e6860045eb88ec6e9/model.safetensors.index.json
+[INFO|modeling_utils.py:2170] 2025-04-29 16:06:38,115 >> Instantiating Gemma2ForSequenceClassification model under default dtype torch.bfloat16.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:47<01:47, 107.71s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:52<00:00, 47.41s/it] Loading checkpoint shards: 100%|██████████| 2/2 [01:52<00:00, 56.46s/it]
+[INFO|modeling_utils.py:4987] 2025-04-29 16:08:31,513 >> All model checkpoint weights were used when initializing Gemma2ForSequenceClassification.
+
+[INFO|modeling_utils.py:4995] 2025-04-29 16:08:31,514 >> All the weights of Gemma2ForSequenceClassification were initialized from the model checkpoint at Ray2333/GRM-gemma2-2B-rewardmodel-ft.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Gemma2ForSequenceClassification for predictions without further training.
+[INFO|tokenization_utils_base.py:2060] 2025-04-29 16:08:32,483 >> loading file tokenizer.model from cache at /nlp/data/huggingface_cache/models--Ray2333--GRM-gemma2-2B-rewardmodel-ft/snapshots/6a6e503f3c03a88e92c34c4e6860045eb88ec6e9/tokenizer.model
+[INFO|tokenization_utils_base.py:2060] 2025-04-29 16:08:32,483 >> loading file tokenizer.json from cache at /nlp/data/huggingface_cache/models--Ray2333--GRM-gemma2-2B-rewardmodel-ft/snapshots/6a6e503f3c03a88e92c34c4e6860045eb88ec6e9/tokenizer.json
+[INFO|tokenization_utils_base.py:2060] 2025-04-29 16:08:32,483 >> loading file added_tokens.json from cache at /nlp/data/huggingface_cache/models--Ray2333--GRM-gemma2-2B-rewardmodel-ft/snapshots/6a6e503f3c03a88e92c34c4e6860045eb88ec6e9/added_tokens.json
+[INFO|tokenization_utils_base.py:2060] 2025-04-29 16:08:32,483 >> loading file special_tokens_map.json from cache at /nlp/data/huggingface_cache/models--Ray2333--GRM-gemma2-2B-rewardmodel-ft/snapshots/6a6e503f3c03a88e92c34c4e6860045eb88ec6e9/special_tokens_map.json
+[INFO|tokenization_utils_base.py:2060] 2025-04-29 16:08:32,483 >> loading file tokenizer_config.json from cache at /nlp/data/huggingface_cache/models--Ray2333--GRM-gemma2-2B-rewardmodel-ft/snapshots/6a6e503f3c03a88e92c34c4e6860045eb88ec6e9/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2060] 2025-04-29 16:08:32,483 >> loading file chat_template.jinja from cache at None
+2025-04-29 16:08:38 - INFO - __main__ - *** Preparing dataset with HF Transformers ***
+The OrderedVocab you are attempting to save contains holes for indices [0], your vocabulary could be corrupted !
+Map (num_proc=8):   0%|          | 0/2985 [00:00<?, ? examples/s]The OrderedVocab you are attempting to save contains holes for indices [0], your vocabulary could be corrupted !
+The OrderedVocab you are attempting to save contains holes for indices [0], your vocabulary could be corrupted !
+The OrderedVocab you are attempting to save contains holes for indices [0], your vocabulary could be corrupted !
+The OrderedVocab you are attempting to save contains holes for indices [0], your vocabulary could be corrupted !
+The OrderedVocab you are attempting to save contains holes for indices [0], your vocabulary could be corrupted !
+Map (num_proc=8):   0%|          | 1/2985 [00:04<3:37:02,  4.36s/ examples]The OrderedVocab you are attempting to save contains holes for indices [0], your vocabulary could be corrupted !
+Map (num_proc=8):  13%|█▎        | 375/2985 [00:05<00:32, 81.54 examples/s]The OrderedVocab you are attempting to save contains holes for indices [0], your vocabulary could be corrupted !
+Map (num_proc=8):  25%|██▌       | 747/2985 [00:07<00:16, 131.70 examples/s]The OrderedVocab you are attempting to save contains holes for indices [0], your vocabulary could be corrupted !
+Map (num_proc=8):  38%|███▊      | 1121/2985 [00:08<00:10, 175.20 examples/s]Map (num_proc=8):  50%|█████     | 1494/2985 [00:09<00:05, 252.08 examples/s]Map (num_proc=8):  59%|█████▉    | 1765/2985 [00:09<00:03, 336.45 examples/s]Map (num_proc=8):  63%|██████▎   | 1866/2985 [00:09<00:03, 360.43 examples/s]Map (num_proc=8):  66%|██████▋   | 1982/2985 [00:10<00:03, 269.21 examples/s]Map (num_proc=8):  75%|███████▌  | 2239/2985 [00:10<00:01, 392.64 examples/s]Map (num_proc=8):  79%|███████▉  | 2361/2985 [00:11<00:01, 321.77 examples/s]Map (num_proc=8):  88%|████████▊ | 2612/2985 [00:11<00:00, 463.65 examples/s]Map (num_proc=8):  98%|█████████▊| 2915/2985 [00:11<00:00, 656.07 examples/s]Map (num_proc=8): 100%|██████████| 2985/2985 [00:11<00:00, 249.90 examples/s]
+[WARNING|base.py:978] 2025-04-29 16:08:52,010 >> Device set to use cuda:0
+/mnt/nlpgridio3/data/anirudh2/venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+Processing batches:   0%|          | 0/187 [00:00<?, ?it/s]/mnt/nlpgridio3/data/anirudh2/venv/lib/python3.12/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/mnt/nlpgridio3/data/anirudh2/venv/lib/python3.12/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/mnt/nlpgridio3/data/anirudh2/venv/lib/python3.12/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/mnt/nlpgridio3/data/anirudh2/venv/lib/python3.12/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[INFO|base.py:1299] 2025-04-29 16:10:15,570 >> Disabling tokenizer parallelism, we're using DataLoader multithreading already
+Processing batches:   1%|          | 1/187 [01:25<4:24:56, 85.47s/it]Processing batches:   1%|          | 2/187 [01:26<1:50:05, 35.71s/it]Processing batches:   2%|▏         | 3/187 [01:27<1:00:57, 19.88s/it]Processing batches:   2%|▏         | 4/187 [01:28<37:53, 12.42s/it]  Processing batches:   3%|▎         | 5/187 [01:29<25:12,  8.31s/it][WARNING|logging.py:329] 2025-04-29 16:10:21,528 >> You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+Processing batches:   3%|▎         | 6/187 [01:30<17:22,  5.76s/it]Processing batches:   4%|▎         | 7/187 [01:31<12:36,  4.21s/it]Processing batches:   4%|▍         | 8/187 [01:31<09:17,  3.11s/it]Processing batches:   5%|▍         | 9/187 [01:33<07:19,  2.47s/it]Processing batches:   5%|▌         | 10/187 [01:34<05:56,  2.01s/it]Processing batches:   6%|▌         | 11/187 [01:34<04:57,  1.69s/it]Processing batches:   6%|▋         | 12/187 [01:35<04:04,  1.39s/it]Processing batches:   7%|▋         | 13/187 [01:36<03:45,  1.29s/it]Processing batches:   7%|▋         | 14/187 [01:37<03:32,  1.23s/it]Processing batches:   8%|▊         | 15/187 [01:38<03:23,  1.18s/it]Processing batches:   9%|▊         | 16/187 [01:39<03:16,  1.15s/it]Processing batches:   9%|▉         | 17/187 [01:41<03:11,  1.12s/it]Processing batches:  10%|▉         | 18/187 [01:42<03:07,  1.11s/it]Processing batches:  10%|█         | 19/187 [01:43<03:03,  1.09s/it]Processing batches:  11%|█         | 20/187 [01:44<03:01,  1.09s/it]Processing batches:  11%|█         | 21/187 [01:45<02:56,  1.07s/it]Processing batches:  12%|█▏        | 22/187 [01:46<02:55,  1.07s/it]Processing batches:  12%|█▏        | 23/187 [01:47<02:54,  1.06s/it]Processing batches:  13%|█▎        | 24/187 [01:48<02:50,  1.05s/it]Processing batches:  13%|█▎        | 25/187 [01:49<02:49,  1.05s/it]Processing batches:  14%|█▍        | 26/187 [01:50<02:49,  1.05s/it]Processing batches:  14%|█▍        | 27/187 [01:51<02:39,  1.00it/s]Processing batches:  15%|█▍        | 28/187 [01:52<02:29,  1.06it/s]Processing batches:  16%|█▌        | 29/187 [01:53<02:34,  1.02it/s]Processing batches:  16%|█▌        | 30/187 [01:53<02:14,  1.16it/s]Processing batches:  17%|█▋        | 31/187 [01:54<01:59,  1.31it/s]Processing batches:  17%|█▋        | 32/187 [01:54<01:36,  1.60it/s]Processing batches:  18%|█▊        | 33/187 [01:55<01:36,  1.60it/s]Processing batches:  18%|█▊        | 34/187 [01:55<01:34,  1.62it/s]Processing batches:  19%|█▊        | 35/187 [01:56<01:16,  1.98it/s]Processing batches:  19%|█▉        | 36/187 [01:56<01:11,  2.11it/s]Processing batches:  20%|█▉        | 37/187 [01:57<01:21,  1.83it/s]Processing batches:  20%|██        | 38/187 [01:58<01:39,  1.50it/s]Processing batches:  21%|██        | 39/187 [01:59<01:46,  1.39it/s]Processing batches:  21%|██▏       | 40/187 [02:00<02:01,  1.21it/s]Processing batches:  22%|██▏       | 41/187 [02:00<02:00,  1.22it/s]Processing batches:  22%|██▏       | 42/187 [02:01<02:01,  1.19it/s]Processing batches:  23%|██▎       | 43/187 [02:02<02:08,  1.12it/s]Processing batches:  24%|██▎       | 44/187 [02:03<02:16,  1.05it/s]Processing batches:  24%|██▍       | 45/187 [02:05<02:21,  1.01it/s]Processing batches:  25%|██▍       | 46/187 [02:05<01:54,  1.23it/s]Processing batches:  25%|██▌       | 47/187 [02:06<01:46,  1.32it/s]Processing batches:  26%|██▌       | 48/187 [02:06<01:47,  1.30it/s]Processing batches:  26%|██▌       | 49/187 [02:07<01:59,  1.15it/s]Processing batches:  27%|██▋       | 50/187 [02:08<02:00,  1.14it/s]Processing batches:  27%|██▋       | 51/187 [02:09<02:03,  1.10it/s]Processing batches:  28%|██▊       | 52/187 [02:10<02:00,  1.12it/s]Processing batches:  28%|██▊       | 53/187 [02:11<01:59,  1.12it/s]Processing batches:  29%|██▉       | 54/187 [02:12<01:57,  1.14it/s]Processing batches:  29%|██▉       | 55/187 [02:13<01:54,  1.15it/s]Processing batches:  30%|██▉       | 56/187 [02:14<01:55,  1.13it/s]Processing batches:  30%|███       | 57/187 [02:15<01:55,  1.13it/s]Processing batches:  31%|███       | 58/187 [02:15<01:53,  1.13it/s]Processing batches:  32%|███▏      | 59/187 [02:16<01:47,  1.19it/s]Processing batches:  32%|███▏      | 60/187 [02:17<01:44,  1.22it/s]Processing batches:  33%|███▎      | 61/187 [02:18<01:41,  1.24it/s]Processing batches:  33%|███▎      | 62/187 [02:19<01:40,  1.24it/s]Processing batches:  34%|███▎      | 63/187 [02:19<01:39,  1.24it/s]Processing batches:  34%|███▍      | 64/187 [02:20<01:41,  1.21it/s]Processing batches:  35%|███▍      | 65/187 [02:21<01:36,  1.27it/s]Processing batches:  35%|███▌      | 66/187 [02:22<01:33,  1.29it/s]Processing batches:  36%|███▌      | 67/187 [02:22<01:27,  1.38it/s]Processing batches:  36%|███▋      | 68/187 [02:23<01:22,  1.45it/s]Processing batches:  37%|███▋      | 69/187 [02:24<01:19,  1.48it/s]Processing batches:  37%|███▋      | 70/187 [02:24<01:15,  1.55it/s]Processing batches:  38%|███▊      | 71/187 [02:25<01:13,  1.58it/s]Processing batches:  39%|███▊      | 72/187 [02:26<01:19,  1.45it/s]Processing batches:  39%|███▉      | 73/187 [02:26<01:20,  1.41it/s]Processing batches:  40%|███▉      | 74/187 [02:27<01:30,  1.25it/s]Processing batches:  40%|████      | 75/187 [02:28<01:28,  1.26it/s]Processing batches:  41%|████      | 76/187 [02:29<01:22,  1.35it/s]Processing batches:  41%|████      | 77/187 [02:29<01:15,  1.45it/s]Processing batches:  42%|████▏     | 78/187 [02:30<01:18,  1.39it/s]Processing batches:  42%|████▏     | 79/187 [02:31<01:12,  1.50it/s]Processing batches:  43%|████▎     | 80/187 [02:31<01:03,  1.68it/s]Processing batches:  43%|████▎     | 81/187 [02:31<00:58,  1.81it/s]Processing batches:  44%|████▍     | 82/187 [02:32<01:01,  1.71it/s]Processing batches:  44%|████▍     | 83/187 [02:33<01:02,  1.65it/s]Processing batches:  45%|████▍     | 84/187 [02:33<01:03,  1.62it/s]Processing batches:  45%|████▌     | 85/187 [02:34<00:58,  1.74it/s]Processing batches:  46%|████▌     | 86/187 [02:34<00:54,  1.84it/s]Processing batches:  47%|████▋     | 87/187 [02:35<00:44,  2.26it/s]Processing batches:  47%|████▋     | 88/187 [02:35<00:46,  2.13it/s]Processing batches:  48%|████▊     | 89/187 [02:36<00:55,  1.76it/s]Processing batches:  48%|████▊     | 90/187 [02:37<01:05,  1.48it/s]Processing batches:  49%|████▊     | 91/187 [02:38<01:12,  1.32it/s]Processing batches:  49%|████▉     | 92/187 [02:39<01:14,  1.27it/s]Processing batches:  50%|████▉     | 93/187 [02:40<01:22,  1.14it/s]Processing batches:  50%|█████     | 94/187 [02:41<01:19,  1.17it/s]Processing batches:  51%|█████     | 95/187 [02:42<01:24,  1.08it/s]Processing batches:  51%|█████▏    | 96/187 [02:43<01:27,  1.05it/s]Processing batches:  52%|█████▏    | 97/187 [02:44<01:29,  1.01it/s]Processing batches:  52%|█████▏    | 98/187 [02:44<01:17,  1.14it/s]Processing batches:  53%|█████▎    | 99/187 [02:45<01:11,  1.23it/s]Processing batches:  53%|█████▎    | 100/187 [02:46<01:06,  1.30it/s]Processing batches:  54%|█████▍    | 101/187 [02:46<01:01,  1.41it/s]Processing batches:  55%|█████▍    | 102/187 [02:47<01:03,  1.33it/s]Processing batches:  55%|█████▌    | 103/187 [02:48<01:12,  1.16it/s]Processing batches:  56%|█████▌    | 104/187 [02:49<01:14,  1.11it/s]Processing batches:  56%|█████▌    | 105/187 [02:50<01:16,  1.07it/s]Processing batches:  57%|█████▋    | 106/187 [02:51<01:19,  1.02it/s]Processing batches:  57%|█████▋    | 107/187 [02:52<01:16,  1.04it/s]Processing batches:  58%|█████▊    | 108/187 [02:53<01:10,  1.13it/s]Processing batches:  58%|█████▊    | 109/187 [02:54<01:09,  1.12it/s]Processing batches:  59%|█████▉    | 110/187 [02:55<01:04,  1.20it/s]Processing batches:  59%|█████▉    | 111/187 [02:55<00:59,  1.28it/s]Processing batches:  60%|█████▉    | 112/187 [02:56<01:04,  1.16it/s]Processing batches:  60%|██████    | 113/187 [02:57<01:09,  1.07it/s]Processing batches:  61%|██████    | 114/187 [02:58<01:12,  1.01it/s]Processing batches:  61%|██████▏   | 115/187 [03:00<01:13,  1.03s/it]Processing batches:  62%|██████▏   | 116/187 [03:01<01:14,  1.05s/it]Processing batches:  63%|██████▎   | 117/187 [03:02<01:13,  1.05s/it]Processing batches:  63%|██████▎   | 118/187 [03:03<01:13,  1.06s/it]Processing batches:  64%|██████▎   | 119/187 [03:04<01:08,  1.01s/it]Processing batches:  64%|██████▍   | 120/187 [03:04<01:01,  1.09it/s]Processing batches:  65%|██████▍   | 121/187 [03:05<00:54,  1.21it/s]Processing batches:  65%|██████▌   | 122/187 [03:06<00:54,  1.18it/s]Processing batches:  66%|██████▌   | 123/187 [03:07<00:59,  1.08it/s]Processing batches:  66%|██████▋   | 124/187 [03:08<01:01,  1.02it/s]Processing batches:  67%|██████▋   | 125/187 [03:09<00:59,  1.04it/s]Processing batches:  67%|██████▋   | 126/187 [03:10<01:01,  1.01s/it]Processing batches:  68%|██████▊   | 127/187 [03:11<01:02,  1.04s/it]Processing batches:  68%|██████▊   | 128/187 [03:12<01:02,  1.06s/it]Processing batches:  69%|██████▉   | 129/187 [03:13<00:52,  1.10it/s]Processing batches:  70%|██████▉   | 130/187 [03:14<00:49,  1.16it/s]Processing batches:  70%|███████   | 131/187 [03:14<00:44,  1.26it/s]Processing batches:  71%|███████   | 132/187 [03:15<00:38,  1.43it/s]Processing batches:  71%|███████   | 133/187 [03:16<00:44,  1.22it/s]Processing batches:  72%|███████▏  | 134/187 [03:17<00:47,  1.12it/s]Processing batches:  72%|███████▏  | 135/187 [03:18<00:49,  1.04it/s]Processing batches:  73%|███████▎  | 136/187 [03:19<00:51,  1.01s/it]Processing batches:  73%|███████▎  | 137/187 [03:20<00:49,  1.01it/s]Processing batches:  74%|███████▍  | 138/187 [03:21<00:50,  1.03s/it]Processing batches:  74%|███████▍  | 139/187 [03:22<00:43,  1.11it/s]Processing batches:  75%|███████▍  | 140/187 [03:23<00:43,  1.07it/s]Processing batches:  75%|███████▌  | 141/187 [03:24<00:38,  1.19it/s]Processing batches:  76%|███████▌  | 142/187 [03:24<00:38,  1.17it/s]Processing batches:  76%|███████▋  | 143/187 [03:25<00:35,  1.25it/s]Processing batches:  77%|███████▋  | 144/187 [03:26<00:38,  1.12it/s]Processing batches:  78%|███████▊  | 145/187 [03:27<00:35,  1.19it/s]Processing batches:  78%|███████▊  | 146/187 [03:28<00:37,  1.08it/s]Processing batches:  79%|███████▊  | 147/187 [03:29<00:39,  1.02it/s]Processing batches:  79%|███████▉  | 148/187 [03:30<00:37,  1.03it/s]Processing batches:  80%|███████▉  | 149/187 [03:31<00:38,  1.01s/it]Processing batches:  80%|████████  | 150/187 [03:32<00:37,  1.01s/it]Processing batches:  81%|████████  | 151/187 [03:33<00:33,  1.08it/s]Processing batches:  81%|████████▏ | 152/187 [03:34<00:29,  1.17it/s]Processing batches:  82%|████████▏ | 153/187 [03:35<00:31,  1.08it/s]Processing batches:  82%|████████▏ | 154/187 [03:36<00:32,  1.02it/s]Processing batches:  83%|████████▎ | 155/187 [03:37<00:32,  1.02s/it]Processing batches:  83%|████████▎ | 156/187 [03:38<00:32,  1.04s/it]Processing batches:  84%|████████▍ | 157/187 [03:39<00:31,  1.07s/it]Processing batches:  84%|████████▍ | 158/187 [03:40<00:29,  1.02s/it]Processing batches:  85%|████████▌ | 159/187 [03:41<00:29,  1.05s/it]Processing batches:  86%|████████▌ | 160/187 [03:42<00:29,  1.08s/it]Processing batches:  86%|████████▌ | 161/187 [03:43<00:28,  1.09s/it]Processing batches:  87%|████████▋ | 162/187 [03:45<00:27,  1.11s/it]Processing batches:  87%|████████▋ | 163/187 [03:46<00:26,  1.11s/it]Processing batches:  88%|████████▊ | 164/187 [03:47<00:25,  1.12s/it]Processing batches:  88%|████████▊ | 165/187 [03:48<00:24,  1.12s/it]Processing batches:  89%|████████▉ | 166/187 [03:49<00:23,  1.12s/it]Processing batches:  89%|████████▉ | 167/187 [03:50<00:22,  1.11s/it]Processing batches:  90%|████████▉ | 168/187 [03:51<00:21,  1.12s/it]Processing batches:  90%|█████████ | 169/187 [03:52<00:19,  1.09s/it]Processing batches:  91%|█████████ | 170/187 [03:54<00:18,  1.10s/it]Processing batches:  91%|█████████▏| 171/187 [03:55<00:17,  1.11s/it]Processing batches:  92%|█████████▏| 172/187 [03:56<00:15,  1.06s/it]Processing batches:  93%|█████████▎| 173/187 [03:57<00:15,  1.08s/it]Processing batches:  93%|█████████▎| 174/187 [03:58<00:14,  1.09s/it]Processing batches:  94%|█████████▎| 175/187 [03:59<00:12,  1.04s/it]Processing batches:  94%|█████████▍| 176/187 [04:00<00:11,  1.07s/it]Processing batches:  95%|█████████▍| 177/187 [04:01<00:10,  1.08s/it]Processing batches:  95%|█████████▌| 178/187 [04:02<00:09,  1.09s/it]Processing batches:  96%|█████████▌| 179/187 [04:03<00:09,  1.15s/it]Processing batches:  96%|█████████▋| 180/187 [04:04<00:07,  1.12s/it]Processing batches:  97%|█████████▋| 181/187 [04:05<00:06,  1.08s/it]Processing batches:  97%|█████████▋| 182/187 [04:06<00:05,  1.05s/it]Processing batches:  98%|█████████▊| 183/187 [04:08<00:04,  1.06s/it]Processing batches:  98%|█████████▊| 184/187 [04:09<00:03,  1.05s/it]Processing batches:  99%|█████████▉| 185/187 [04:10<00:02,  1.05s/it]Processing batches:  99%|█████████▉| 186/187 [04:10<00:01,  1.01s/it]Processing batches: 100%|██████████| 187/187 [04:13<00:00,  1.49s/it]Processing batches: 100%|██████████| 187/187 [04:13<00:00,  1.36s/it]
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 68638.08 examples/s]
+alpacaeval-easy: 0.7800
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 79389.72 examples/s]
+alpacaeval-hard: 0.8211
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 78417.60 examples/s]
+alpacaeval-length: 0.7158
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 79613.87 examples/s]
+donotanswer: 0.7941
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 71008.45 examples/s]
+hep-cpp: 0.8293
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 79976.48 examples/s]
+hep-go: 0.8476
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 70601.62 examples/s]
+hep-java: 0.8598
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 80169.03 examples/s]
+hep-js: 0.8293
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 72674.07 examples/s]
+hep-python: 0.8780
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 81468.50 examples/s]
+hep-rust: 0.8659
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 70067.81 examples/s]
+llmbar-adver-GPTInst: 0.7826
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 74803.42 examples/s]
+llmbar-adver-GPTOut: 0.7660
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 71535.89 examples/s]
+llmbar-adver-manual: 0.5435
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 67869.36 examples/s]
+llmbar-adver-neighbor: 0.7612
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 78110.36 examples/s]
+llmbar-natural: 0.8200
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 68919.19 examples/s]
+math-prm: 0.9128
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 68037.55 examples/s]
+mt-bench-easy: 0.9643
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 73808.12 examples/s]
+mt-bench-hard: 0.7838
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 68914.26 examples/s]
+mt-bench-med: 0.9500
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 79602.73 examples/s]
+refusals-dangerous: 0.9300
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 78057.28 examples/s]
+refusals-offensive: 0.9800
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 71384.17 examples/s]
+xstest-should-refuse: 0.9675
+Filter:   0%|          | 0/2985 [00:00<?, ? examples/s]Filter: 100%|██████████| 2985/2985 [00:00<00:00, 56282.30 examples/s]
+xstest-should-respond: 0.9080
+
+Section Scores: {'Chat': 0.8072625698324022, 'Chat Hard': 0.7587719298245614, 'Safety': 0.9121621621621622, 'Reasoning': 0.8821888470562558}
+Traceback (most recent call last):
+  File "/mnt/nlpgridio3/data/anirudh2/main/rewardbench_eval.py", line 248, in <module>
+    main()
+  File "/mnt/nlpgridio3/data/anirudh2/main/rewardbench_eval.py", line 237, in main
+    save_to_hub(
+  File "/mnt/nlpgridio3/data/anirudh2/venv/lib/python3.12/site-packages/rewardbench/utils.py", line 112, in save_to_hub
+    os.makedirs(dirname, exist_ok=True)  # redundant in Beaker code
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/output'

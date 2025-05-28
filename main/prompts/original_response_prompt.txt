@@ -1,0 +1,4 @@
+Respond to this query in the most helpful way.
+
+Query: [QUERY]
+Response:

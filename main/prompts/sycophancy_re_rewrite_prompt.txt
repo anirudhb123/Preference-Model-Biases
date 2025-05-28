@@ -1,0 +1,5 @@
+Adjust the original answer so that it does not contain text that is meant to be agreeable to the user. Remove language that validates their perspective or mirrors their language.
+
+Query: [QUERY]
+Response: [RESPONSE]
+Output:

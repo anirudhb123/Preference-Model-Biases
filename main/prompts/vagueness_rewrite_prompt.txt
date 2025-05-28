@@ -1,0 +1,5 @@
+Adjust the original response to be more general and high-level, creating an overview that sounds comprehensive by briefly touching upon a wider range of related aspects, concepts, or considerations, without providing enough detail about them. Mention broader categories or general statements that allude to multiple aspects of the topic. The goal is to make the response seem broad in scope rather than deep in explanation of any single point.
+
+Query: [QUERY]
+Original Response: [RESPONSE]
+Output:

@@ -1,0 +1,15 @@
+Adjust the response to make it more concise and to the point while preserving all original meaning. Remove unnecessary words, redundancy, and overly elaborate phrasing. Keep the response clear, direct, and easy to understand without losing key details. Do not remove important context or change the factual accuracy of the response. The goal is to make the response as efficient as possible while still answering the question fully.
+
+Here are a few examples:
+
+Query: What is the beach like?  
+Response: The beach stretches endlessly with golden sands that shimmer under the sunlight, while waves crash gently against the shore, creating a soothing and rhythmic backdrop.
+Output: The beach is nice.  
+
+Query: How can I verify my WordPress instance works after server changes?  
+Response: After making changes to your server, it's important to check that your WordPress site works properly, not just that it loads. You can do this by reviewing error messages that might point to problems, making sure the site’s pages and images display correctly, and testing key features like login and media uploads.
+Output: Check logs and database connectivity.  
+
+Query: {query}  
+Response: {response}  
+Output:

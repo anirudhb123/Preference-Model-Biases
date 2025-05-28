@@ -1,0 +1,7 @@
+Adjust the response to be as concrete and specific as possible. Remove qualifiers (“might,” “could,” “some argue”), speculative language, and any references to multiple viewpoints. State only the single most factual information without hedging.
+
+Length constraint (IMPORTANT): the output’s word count must be between 50% and 150% of the original response’s word count. Do not add extra examples or paragraphs.
+
+Query: [QUERY]
+Response: [RESPONSE]
+Output:

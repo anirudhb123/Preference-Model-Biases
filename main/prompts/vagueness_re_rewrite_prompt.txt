@@ -1,0 +1,5 @@
+Adjust the original response to be more precise and concrete. If the original response lists several aspects, attempt to provide greater depth or clarification on the one most relevant to the query. Make sure that the adjusted response is roughly the same length as the vague response, by going more in depth into the chosen aspect.
+
+Query: [QUERY]
+Original Response: [RESPONSE]
+Output:

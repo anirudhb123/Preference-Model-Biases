@@ -1,0 +1,5 @@
+Adjust the original answer to make it shorter, but change *nothing*  else.
+
+Query: [QUERY]
+Response: [RESPONSE]
+Output:
