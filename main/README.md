@@ -1,11 +1,35 @@
 # CDA Post-Training Pipeline
 
 > **Detailed End-to-End Instructions**
-> For a high-level overview, see the root `README.md`.
+> 
+> This document provides step-by-step instructions for running the CDA (Contrastive Debias Analysis) post-training pipeline. For a high-level overview, see the root `README.md`.
+
+---
+
+## 📋 Table of Contents
+
+- [Initial Setup](#-initial-setup)
+- [Pipeline Overview](#-pipeline-overview)
+- [Data Preparation](#-data-preparation)
+- [Fine-Tuning](#-fine-tuning)
+- [Evaluation](#-evaluation)
+- [Human Annotation Data](#-human-annotation-data)
+- [Supported Bias Types](#-supported-bias-types)
+- [Bash Scripts Reference](#-bash-scripts-reference)
+- [Troubleshooting](#-troubleshooting)
 
 ---
 
 ## 🚀 Initial Setup
+
+### Prerequisites
+
+- Python 3.8+
+- Access to OpenAI API (for GPT models)
+- Hugging Face account and token
+- Weights & Biases account (optional, for logging)
+
+### Installation
 
 1. **Install dependencies**
 
@@ -13,103 +37,279 @@
    pip install -r main/requirements.txt
    ```
 
-2. **Define API keys**
+2. **Configure API keys**
    
-   Create a script `main/bash_scripts/set_keys.sh` and export the following:
+   Create a script `main/bash_scripts/set_keys.sh` with your API credentials:
 
    ```bash
-   export OPENAI_API_KEY="<your_openai_key>"
-   export HF_API_TOKEN="<your_hf_token>"
-   export WANDB_API_KEY="<your_wandb_key>"
+   #!/bin/bash
+   export OPENAI_API_KEY="your_openai_api_key_here"
+   export HF_API_TOKEN="your_huggingface_token_here"
+   export WANDB_API_KEY="your_wandb_api_key_here"  # Optional
    ```
 
-   Then source it before running any pipeline scripts:
+   Make it executable and source it before running any pipeline scripts:
 
    ```bash
+   chmod +x main/bash_scripts/set_keys.sh
    source main/bash_scripts/set_keys.sh
    ```
 
-3. **Directory structure**
+### Directory Structure
 
-   - `data/`: inputs & outputs from each step
-   - `main/`: core scripts
-   - `main/bash_scripts/`: orchestration wrappers
-   - `human_annotation_data/`: human-annotated examples for validation
+The repository is organized as follows:
+
+```
+├── data/                           # Pipeline inputs and outputs
+├── main/                          # Core pipeline scripts
+│   ├── bash_scripts/              # Orchestration wrappers
+│   └── *.py                       # Python modules
+├── human_annotation_data/         # Human-annotated validation examples
+│   ├── combined_human_annotations.jsonl
+│   ├── group_human_annotations.py
+│   ├── length/                    # Length bias annotations
+│   ├── vagueness/                 # Vagueness bias annotations
+│   ├── jargon/                    # Jargon bias annotations
+│   ├── structure/                 # Structure bias annotations
+│   └── sycophancy/                # Sycophancy bias annotations
+└── README.md                      # This file
+```
 
 ---
 
-## 📊 Pipeline
+## 📊 Pipeline Overview
 
-### Data Preparation
+The CDA pipeline consists of three main phases:
 
-1. Generate baseline responses given queries (`main/bash_scripts/run_base.sh`)
-2. Generate perturbations for bias (`main/bash_scripts/run_perturbed.sh`)
-   - Or, use our pre-computed perturbations from Hugging Face: <https://huggingface.co/datasets/abharadwaj123/preference-model-perturbations>
-3. Label training data subset with occurrences of bias (`main/bash_scripts/run_data_labeling.sh`)
-4. Generate counterfactuals from this subset as examples for fine tuning (`main/bash_scripts/run_counterfactual_generation.sh`)
-5. (OPTIONAL) In the proportion they appear in the labeled training data subset, sample and label examples from chatbot arena (`main/bash_scripts/run_chatbot_labeling.sh`)
+1. **Data Preparation**: Generate and label biased examples
+2. **Fine-Tuning**: Train models to mitigate identified biases
+3. **Evaluation**: Assess model performance and bias reduction
 
-### Fine-Tuning
+The pipeline supports both single-bias and multi-bias mitigation approaches.
 
-#### Mitigating Single Bias
+---
 
-1. Fine tune your choice of model using examples collected in steps 4 and (optionally) 5 (`main/bash_scripts/run_fine_tuning.sh`)
+## 🔧 Data Preparation
 
-#### Mitigating Multiple Biases
+### Step 1: Generate Baseline Responses
 
-1. Fine tune your choice of model using examples collected in steps 4 and (optionally) 5 (`main/bash_scripts/run_fine_tuning_multiple.sh`)
+Generate initial responses from your base model:
 
-### Evaluation of Fine-Tuned Model
+```bash
+bash main/bash_scripts/run_base.sh
+```
 
-1. **RewardBench evaluation** (`main/bash_scripts/run_rewardbench_eval.sh` or `main/bash_scripts/run_rewardbench_eval_multiple.sh`)
-   
-   a. Check output file (outputted to `data/rewardbench_results`) for results
+**Output**: `data/baseline_responses/`
 
-2. **Score perturbed examples** (`main/bash_scripts/run_fine_tuned_rm.sh` or `main/bash_scripts/run_fine_tuned_rm_multiple.sh`)
+### Step 2: Generate Perturbations
+
+Create biased variations of the baseline responses:
+
+```bash
+bash main/bash_scripts/run_perturbed.sh
+```
+
+**Alternative**: Use our pre-computed perturbations from Hugging Face:
+- 📦 [Pre-computed Perturbations Dataset](https://huggingface.co/datasets/abharadwaj123/preference-model-perturbations)
+
+**Output**: `data/perturbed_responses/`
+
+### Step 3: Label Training Data
+
+Identify which examples contain bias:
+
+```bash
+bash main/bash_scripts/run_data_labeling.sh
+```
+
+**Output**: `data/labeled_data/`
+
+### Step 4: Generate Counterfactuals
+
+Create counterfactual examples for fine-tuning:
+
+```bash
+bash main/bash_scripts/run_counterfactual_generation.sh
+```
+
+**Output**: `data/counterfactuals/`
+
+### Step 5: (Optional) Sample Chatbot Arena Data
+
+Incorporate real-world examples from Chatbot Arena:
+
+```bash
+bash main/bash_scripts/run_chatbot_labeling.sh
+```
+
+**Output**: `data/chatbot_arena_samples/`
+
+---
+
+## 🎯 Fine-Tuning
+
+Choose your approach based on whether you want to mitigate single or multiple biases:
+
+### Single Bias Mitigation
+
+Fine-tune your model to address one specific bias type:
+
+```bash
+bash main/bash_scripts/run_fine_tuning.sh
+```
+
+**Input**: Data from steps 4 and (optionally) 5
+**Output**: Fine-tuned model in `data/models/single_bias/`
+
+### Multiple Bias Mitigation
+
+Fine-tune your model to address multiple bias types simultaneously:
+
+```bash
+bash main/bash_scripts/run_fine_tuning_multiple.sh
+```
+
+**Input**: Data from steps 4 and (optionally) 5
+**Output**: Fine-tuned model in `data/models/multiple_bias/`
+
+---
+
+## 📈 Evaluation
+
+### RewardBench Evaluation
+
+Evaluate your fine-tuned model against the RewardBench benchmark:
+
+**Single bias model**:
+```bash
+bash main/bash_scripts/run_rewardbench_eval.sh
+```
+
+**Multiple bias model**:
+```bash
+bash main/bash_scripts/run_rewardbench_eval_multiple.sh
+```
+
+**Output**: Results saved to `data/rewardbench_results/`
+
+### Bias-Specific Evaluation
+
+Score your model on the perturbation examples to measure bias reduction:
+
+**Single bias model**:
+```bash
+bash main/bash_scripts/run_fine_tuned_rm.sh
+```
+
+**Multiple bias model**:
+```bash
+bash main/bash_scripts/run_fine_tuned_rm_multiple.sh
+```
+
+**Output**: Bias scores saved to `data/bias_evaluation/`
 
 ---
 
 ## 🧪 Human Annotation Data
 
-The repository includes human-annotated examples for validation purposes, organized by bias type:
+The repository includes human-annotated examples for validation and comparison:
 
-- `human_annotation_data/combined_human_annotations.jsonl`: All annotations combined
-- `human_annotation_data/group_human_annotations.py`: Script to group annotations by bias type
-- Individual bias annotations:
-  - `human_annotation_data/length/`: Length bias annotations
-  - `human_annotation_data/vagueness/`: Vagueness bias annotations  
-  - `human_annotation_data/jargon/`: Jargon bias annotations
-  - `human_annotation_data/structure/`: Structure bias annotations
-  - `human_annotation_data/sycophancy/`: Sycophancy bias annotations
+### Available Datasets
 
----
+| Dataset | Description | Location |
+|---------|-------------|----------|
+| **Combined** | All bias types together | `human_annotation_data/combined_human_annotations.jsonl` |
+| **Length** | Length preference bias | `human_annotation_data/length/` |
+| **Vagueness** | Specificity preference bias | `human_annotation_data/vagueness/` |
+| **Jargon** | Technical language bias | `human_annotation_data/jargon/` |
+| **Structure** | Format preference bias | `human_annotation_data/structure/` |
+| **Sycophancy** | Agreement preference bias | `human_annotation_data/sycophancy/` |
 
-## 📝 Bash Scripts Reference
+### Processing Annotations
 
-Brief overview of each script in this directory:
+Use the provided script to group annotations by bias type:
 
-| Script | Description |
-|--------|-------------|
-| `main/bash_scripts/run_base.sh` | Generate baseline responses given queries. |
-| `main/bash_scripts/run_chatbot_labeling.sh` | Selects examples from Chatbot Arena for fine-tuning (with counterfactual examples). |
-| `main/bash_scripts/run_counterfactual_generation.sh` | Generates counterfactual examples to probe for bias. |
-| `main/bash_scripts/run_data_labeling.sh` | Labels training examples for the presence of bias. |
-| `main/bash_scripts/run_fine_tuning.sh` | Fine-tunes the reward model on generated counterfactuals. |
-| `main/bash_scripts/run_fine_tuned_rm.sh` | Scores perturbed inputs using the fine-tuned reward model. |
-| `main/bash_scripts/run_perturbed.sh` | Generates perturbations for a particular bias (modify prompt in `generate_perturbed_responses.py` if using RATE). |
-| `main/bash_scripts/run_rewardbench_eval.sh` | Computes evaluation metrics on the RewardBench benchmark. |
-| `main/bash_scripts/run_rewardbench_eval_multiple.sh` | Computes evaluation metrics on the RewardBench benchmark for model mitigating multiple biases. |
-| `main/bash_scripts/run_fine_tuned_rm_multiple.sh` | Scores perturbed inputs using multiple fine-tuned reward model variants. |
-| `main/bash_scripts/run_fine_tuning_multiple.sh` | Fine-tunes the reward model across multiple bias settings and generated counterfactuals across multiple biases. |
+```bash
+python human_annotation_data/group_human_annotations.py
+```
 
 ---
 
 ## 🔍 Supported Bias Types
 
-Based on the human annotation data, this pipeline supports detection and mitigation of:
+This pipeline can detect and mitigate the following bias types:
 
-- **Length bias**: Preference for longer or shorter responses
-- **Vagueness bias**: Preference for vague vs. specific responses  
-- **Jargon bias**: Preference for technical vs. accessible language
-- **Structure bias**: Preference for certain response formats or structures
-- **Sycophancy bias**: Preference for agreeable vs. truthful responses
+| Bias Type | Description | Example |
+|-----------|-------------|---------|
+| **Length** | Preference for longer or shorter responses | Favoring verbose over concise answers |
+| **Vagueness** | Preference for vague vs. specific responses | Preferring general over detailed explanations |
+| **Jargon** | Preference for technical vs. accessible language | Favoring complex terminology over plain language |
+| **Structure** | Preference for certain response formats | Preferring bullet points over paragraphs |
+| **Sycophancy** | Preference for agreeable vs. truthful responses | Favoring responses that agree with user opinions |
+
+---
+
+## 📝 Bash Scripts Reference
+
+### Core Pipeline Scripts
+
+| Script | Purpose | Input | Output |
+|--------|---------|-------|--------|
+| `run_base.sh` | Generate baseline responses | Queries | Baseline responses |
+| `run_perturbed.sh` | Create biased perturbations | Baseline responses | Perturbed examples |
+| `run_data_labeling.sh` | Label examples for bias | Perturbed examples | Labeled dataset |
+| `run_counterfactual_generation.sh` | Generate training examples | Labeled dataset | Counterfactual pairs |
+| `run_chatbot_labeling.sh` | Sample real-world examples | Chatbot Arena data | Labeled samples |
+
+### Fine-Tuning Scripts
+
+| Script | Purpose | Bias Scope |
+|--------|---------|------------|
+| `run_fine_tuning.sh` | Train single-bias model | One bias type |
+| `run_fine_tuning_multiple.sh` | Train multi-bias model | Multiple bias types |
+
+### Evaluation Scripts
+
+| Script | Purpose | Model Type |
+|--------|---------|------------|
+| `run_rewardbench_eval.sh` | RewardBench evaluation | Single-bias model |
+| `run_rewardbench_eval_multiple.sh` | RewardBench evaluation | Multi-bias model |
+| `run_fine_tuned_rm.sh` | Bias-specific evaluation | Single-bias model |
+| `run_fine_tuned_rm_multiple.sh` | Bias-specific evaluation | Multi-bias model |
+
+---
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**API Key Errors**
+- Ensure all required API keys are set in `set_keys.sh`
+- Verify API keys are valid and have sufficient quota
+- Check that the script is sourced before running pipeline commands
+
+**Memory Issues**
+- Reduce batch size in configuration files
+- Use smaller model variants for testing
+- Consider using gradient checkpointing for large models
+
+**Data Processing Errors**
+- Verify input data format matches expected schema
+- Check file permissions in data directories
+- Ensure sufficient disk space for intermediate outputs
+
+**Model Training Issues**
+- Monitor training logs for convergence issues
+- Adjust learning rate and other hyperparameters
+- Verify training data quality and balance
+
+### Getting Help
+
+- Check the root `README.md` for high-level guidance
+- Review individual script documentation
+- Examine output logs for detailed error messages
+- Ensure all dependencies are correctly installed
+
+---
+
+**Next Steps**: After completing the pipeline, review the evaluation results to assess bias mitigation effectiveness and consider iterating on the approach based on your specific use case.
