@@ -28,9 +28,3 @@ This repository contains the full Counterfactual Data Augmentation (CDA) post‑
 * **`data/`** and **`main/`** are the *only* folders needed to run or adapt the pipeline.
 * Everything else under the root (e.g. `data_utils/`, `human_annotation_data/`, `llm_evaluation_data/`) supports figures, analysis, and results for our accompanying paper.
 * For installation, configuration, and step‑by‑step commands, check **`main/README.md`**.
-
----
-
-## License
-
-Released under the **MIT License**. See [LICENSE](./LICENSE).
