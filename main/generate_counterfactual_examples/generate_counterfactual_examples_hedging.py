@@ -3,8 +3,8 @@
 Example usage:
 
 INPUT_PATH=/mnt/nlpgridio3/data/anirudh2/data/skywork_training_sample.jsonl
-LABELED_PATH=/mnt/nlpgridio3/data/anirudh2/data/GEMMA_sample_labeled_list.jsonl
-OUTPUT_PATH=/mnt/nlpgridio3/data/anirudh2/data/GEMMA_counterfactuals_hedging.jsonl
+LABELED_PATH=/mnt/nlpgridio3/data/anirudh2/data/skywork_sample_labeled_list.jsonl
+OUTPUT_PATH=/mnt/nlpgridio3/data/anirudh2/data/skywork_counterfactuals_hedging.jsonl
 MODEL_NAME=gpt-4
 python3 generate_counterfactual_examples_hedging.py \
   --input_path=${INPUT_PATH} \

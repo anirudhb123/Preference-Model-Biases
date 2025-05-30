@@ -3,7 +3,7 @@ r"""Analyze queries and classify responses into vagueness-related categories.
 Example usage:
 
 INPUT_PATH=data/skywork_training_sample.jsonl
-OUTPUT_PATH=data/GEMMA_sample_labeled.jsonl
+OUTPUT_PATH=data/skywork_sample_labeled.jsonl
 python3 main/vagueness_labeling.py \
     --input_path=${INPUT_PATH} \
     --output_path=${OUTPUT_PATH} \

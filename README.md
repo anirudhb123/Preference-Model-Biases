@@ -1,23 +1,12 @@
 # Counterfactual Data Augmentation (CDA) Pipeline
-
-> **High-Level Overview**
-> 
+ 
 > For detailed pipeline usage and fine-tuning instructions, see [`main/README.md`](main/README.md).
-
-## 🎯 Project Overview
-
-The CDA Pipeline is a comprehensive toolkit for detecting and mitigating biases in language models through counterfactual data augmentation. It supports multiple bias types including length, vagueness, jargon, structure, and sycophancy biases.
 
 ## 📁 Repository Structure
 
 ```text
 .
-├── data/                     # Pipeline inputs and outputs
-│   ├── baseline_responses/   # Raw model outputs
-│   ├── perturbations/        # Counterfactual examples
-│   ├── training_labels/      # Bias labels
-│   └── fine_tuned_results/   # Model checkpoints & metrics
-│
+├── data/                      # All pipeline inputs and outputs│
 ├── main/                     # Core pipeline implementation
 │   ├── bash_scripts/        # Execution scripts
 │   └── README.md            # Detailed instructions

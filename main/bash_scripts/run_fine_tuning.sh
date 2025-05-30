@@ -50,7 +50,7 @@ WANDB_PROJECT="Reward-Model-Biases"
 WANDB_RUN_NAME="skywork-${LOWER_SIZE}-fine-tuned-${BIAS}-${EXAMPLES}-${EPOCHS}"
 
 # paths
-INPUT_PATH="data/reward_model_counterfactual_data/GEMMA_counterfactuals_${BIAS}.jsonl"
+INPUT_PATH="data/reward_model_counterfactual_data/skywork_counterfactuals_${BIAS}.jsonl"
 # if you want to use supplemental chatbot arena data, uncomment this line
 #SECOND_INPUT_PATH="data/chatbot_arena_labeled_data/chatbot_arena_${BIAS}_labeled.jsonl"
 

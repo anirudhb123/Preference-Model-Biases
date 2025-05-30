@@ -22,8 +22,8 @@ source main/bash_scripts/set_keys.sh
 MODEL_NAME="gpt-4"
 BIAS="vagueness"
 INPUT_PATH="data/skywork_training_sample.jsonl"
-LABELED_PATH="data/reward_model_training_labeled_data/GEMMA_sample_labeled_${BIAS}.jsonl"
-OUTPUT_PATH="data/reward_model_counterfactual_data/GEMMA_counterfactuals_${BIAS}.jsonl"
+LABELED_PATH="data/reward_model_training_labeled_data/skywork_sample_labeled_${BIAS}.jsonl"
+OUTPUT_PATH="data/reward_model_counterfactual_data/skywork_counterfactuals_${BIAS}.jsonl"
 
 # swap out approprpriate bias
 python3 -u main/generate_counterfactual_examples/generate_counterfactual_examples_${BIAS}.py \

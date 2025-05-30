@@ -56,7 +56,7 @@ WANDB_RUN_NAME="skywork-${LOWER_SIZE}-fine-tuned-${SANITIZED_BIASES}-${EXAMPLES}
 IFS=',' read -ra ARR_BIASES <<< "$BIASES"
 INPUT_FILES=""
 for b in "${ARR_BIASES[@]}"; do
-  INPUT_FILES+="data/reward_model_counterfactual_data/GEMMA_counterfactuals_${b}.jsonl,"
+  INPUT_FILES+="data/reward_model_counterfactual_data/skywork_counterfactuals_${b}.jsonl,"
 done
 INPUT_FILES=${INPUT_FILES%,}  # strip trailing comma
 
