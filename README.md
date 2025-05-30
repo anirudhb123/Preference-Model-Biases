@@ -73,5 +73,3 @@ You can find the arXiv paper here.
   url       = {},
 }
 ```
-
-**Note**: For installation, configuration, and step-by-step usage instructions, please refer to [`main/README.md`](main/README.md).
