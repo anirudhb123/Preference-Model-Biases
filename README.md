@@ -10,7 +10,7 @@ Reward models can exhibit idiosyncratic biases—favoring length, structure, jar
 - Measure misalignment with human judgments and quantify miscalibration
 - Fine-tune via targeted counterfactual augmentation to correct bias
 
-> For detailed pipeline usage and fine-tuning instructions, see [`main/README.md`](main/README.md).
+For detailed pipeline usage and fine-tuning instructions, see [`main/README.md`](main/README.md).
 
 ## 📁 Repository Structure
 
