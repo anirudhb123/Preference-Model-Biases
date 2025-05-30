@@ -1,7 +1,8 @@
-# Counterfactual Data Augmentation (CDA) Pipeline
+# Flattery, Fluff, and Fog: Diagnosing and Inoculating Idiosyncratic Biases in Preference Models
 
-> **High-Level Overview**
-> 
+> **Overview**  
+> We identify five superficial bias signals (length, structure, jargon, sycophancy, vagueness) in reward models by constructing controlled counterfactual response pairs and measuring their misalignment with human judgments. Then, using a targeted counterfactual augmentation pipeline, we fine-tune these models to reduce miscalibration while maintaining overall evaluation accuracy.  
+>
 > For detailed pipeline usage and fine-tuning instructions, see [`main/README.md`](main/README.md).
 
 ## 📁 Repository Structure
