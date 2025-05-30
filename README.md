@@ -1,6 +1,14 @@
 # Flattery, Fluff, and Fog: Diagnosing and Inoculating Idiosyncratic Biases in Preference Models
 
-We identify five superficial bias signals (length, structure, jargon, sycophancy, vagueness) in reward models by constructing controlled counterfactual response pairs and measuring their misalignment with human judgments. Then, using a targeted counterfactual augmentation pipeline, we fine-tune these models to reduce miscalibration while maintaining overall evaluation accuracy.  
+## Overview
+
+Reward models can exhibit idiosyncratic biases—favoring length, structure, jargon, vagueness, or sycophancy over true quality.  
+
+**In this work we:**
+
+- Construct controlled counterfactual response pairs for each bias
+- Measure misalignment with human judgments and quantify miscalibration
+- Fine-tune via targeted counterfactual augmentation to correct bias
 
 > For detailed pipeline usage and fine-tuning instructions, see [`main/README.md`](main/README.md).
 
