@@ -1,8 +1,6 @@
 # CDA Post-Training Pipeline
 
-> **Detailed End-to-End Instructions**
-> 
-> This document provides step-by-step instructions for running the CDA (Contrastive Debias Analysis) post-training pipeline. For a high-level overview, see the root `README.md`.
+This document provides step-by-step instructions for running the CDA (Contrastive Debias Analysis) post-training pipeline. For a high-level overview of our approach, see the root `README.md`.
 
 ---
 
