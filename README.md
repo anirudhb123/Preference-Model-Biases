@@ -6,11 +6,11 @@ Reward models can exhibit idiosyncratic biases—favoring length, structure, jar
 
 **In this work we:**
 
-- Construct controlled counterfactual response pairs for each bias
-- Measure misalignment with human judgments and quantify miscalibration
-- Fine-tune via targeted counterfactual augmentation to correct bias
+- Construct controlled counterfactual response pairs for each bias  
+- Measure misalignment with human judgments and quantify miscalibration  
+- Fine-tune via targeted counterfactual data augmentation (CDA) to correct bias  
 
-For detailed pipeline usage and fine-tuning instructions, see [`main/README.md`](main/README.md).
+For detailed CDA pipeline usage and fine-tuning instructions, see [`main/README.md`](main/README.md).
 
 ## 📁 Repository Structure
 
