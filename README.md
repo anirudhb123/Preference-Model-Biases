@@ -2,7 +2,7 @@
 
 ## Overview
 
-Reward models can exhibit idiosyncratic biases—favoring length, structure, jargon, vagueness, or sycophancy over true quality.  
+Preference models can exhibit idiosyncratic biases—favoring length, structure, jargon, vagueness, or sycophancy over true quality.  
 
 **In this work we:**
 
