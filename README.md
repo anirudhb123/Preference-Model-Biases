@@ -57,12 +57,14 @@
 
 You can find the arXiv paper here.
 
+```bibtex
 @InProceedings{,
-  title     = {The Pathology of Preference Models: Diagnosing and Inoculating Preference Model Biases},
+  title     = {Flattery, Fluff, and Fog: Diagnosing and Inoculating Idiosyncratic Biases in Preference Models},
   author    = {Anirudh Bharadwaj and Chaitanya Malaviya and Nitish Joshi and Mark Yatskar},
   booktitle = {arXiv},
   year      = {2025},
   url       = {},
 }
+```
 
 **Note**: For installation, configuration, and step-by-step usage instructions, please refer to [`main/README.md`](main/README.md).
