@@ -1,4 +1,4 @@
-# Flattery, Fluff, and Fog: Diagnosing and Inoculating Idiosyncratic Biases in Preference Models
+# Flattery, Fluff, and Fog: Diagnosing and Mitigating Idiosyncratic Biases in Preference Models
 
 ## Overview
 
