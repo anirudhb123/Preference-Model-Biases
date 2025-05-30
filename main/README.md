@@ -1,6 +1,6 @@
 # CDA Post-Training Pipeline
 
-This document provides step-by-step instructions for running the **Counterfactual Data Augmentation (CDA)** post-training pipeline developed to mitigate idiosyncratic biases in reward models. It leverages controlled counterfactual perturbations for length, structure, jargon, vagueness, and sycophancy to fine-tune models toward human-aligned judgments. For a high-level overview of our approach, see [`../README.md`](../README.md)
+This document provides step-by-step instructions for running the **Counterfactual Data Augmentation (CDA)** post-training pipeline developed to mitigate idiosyncratic biases in reward models. It leverages controlled counterfactual perturbations for length, structure, jargon, vagueness, and sycophancy to fine-tune models toward human-aligned judgments. For a high-level overview of our approach, see [`README.md`](../README.md)
 
 ---
 
