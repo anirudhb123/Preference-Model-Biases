@@ -309,7 +309,3 @@ This pipeline can detect and mitigate the following bias types:
 - Review individual script documentation
 - Examine output logs for detailed error messages
 - Ensure all dependencies are correctly installed
-
----
-
-**Next Steps**: After completing the pipeline, review the evaluation results to assess bias mitigation effectiveness and consider iterating on the approach based on your specific use case.
