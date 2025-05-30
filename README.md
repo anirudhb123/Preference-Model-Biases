@@ -1,12 +1,21 @@
 # Counterfactual Data Augmentation (CDA) Pipeline
- 
+
+> **High-Level Overview**
+> 
 > For detailed pipeline usage and fine-tuning instructions, see [`main/README.md`](main/README.md).
 
 ## 📁 Repository Structure
 
 ```text
 .
-├── data/                      # All pipeline inputs and outputs│
+├── data/                                   # All pipeline inputs and outputs
+│   ├── chatbot_arena_labeled_data/         # Counterfactually perturbed examples sampled from Chatbot Arena
+│   ├── fine_tuned_model_scores/            # Reward-model scores on bias-augmented, fine-tuned data
+│   ├── perturbations/                      # Generated bias perturbations for original model responses
+│   ├── reward_model_counterfactual_data/   # Counterfactual examples used during reward-model fine-tuning
+│   ├── reward_model_training_labeled_data/ # Human-annotated examples for training the reward model
+│   └── rewardbench_results/                # Benchmark metrics and evaluation outputs on RewardBench
+│
 ├── main/                     # Core pipeline implementation
 │   ├── bash_scripts/        # Execution scripts
 │   └── README.md            # Detailed instructions
@@ -42,5 +51,17 @@
 - [Pre-computed Perturbations](https://huggingface.co/datasets/abharadwaj123/preference-model-perturbations)
 
 ---
+
+## Paper and citation
+
+You can find the arXiv paper here.
+
+@InProceedings{,
+  title     = {The Pathology of Preference Models: Diagnosing and Inoculating Preference Model Biases},
+  author    = {Anirudh Bharadwaj and Chaitanya Malaviya and Nitish Joshi and Mark Yatskar},
+  booktitle = {arXiv},
+  year      = {2025},
+  url       = {},
+}
 
 **Note**: For installation, configuration, and step-by-step usage instructions, please refer to [`main/README.md`](main/README.md).
