@@ -1,4 +1,4 @@
-# Flattery, Fluff and Fog: Diagnosing and Mitigating Idiosyncratic Biases in Preference Models
+# Flattery, Fluff, and Fog: Diagnosing and Mitigating Idiosyncratic Biases in Preference Models
 
 ## Overview
 
@@ -66,7 +66,7 @@ You can find the arXiv paper here.
 
 ```bibtex
 @InProceedings{,
-  title     = {Flattery, Fluff and Fog: Diagnosing and Mitigating Idiosyncratic Biases in Preference Models},
+  title     = {Flattery, Fluff, and Fog: Diagnosing and Mitigating Idiosyncratic Biases in Preference Models},
   author    = {Anirudh Bharadwaj and Chaitanya Malaviya and Nitish Joshi and Mark Yatskar},
   booktitle = {arXiv},
   year      = {2025},
