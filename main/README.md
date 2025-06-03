@@ -2,7 +2,7 @@
 
 --- 
 
-![pipeline_overview](pipeline_overview.gif)
+![pipeline_overview](../data_utils/plots/github/pipeline_overview.gif)
 
 --- 
 
