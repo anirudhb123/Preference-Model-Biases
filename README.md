@@ -65,11 +65,14 @@ For detailed CDA pipeline usage and fine-tuning instructions, see [`main/README.
 You can find the arXiv paper [here](https://arxiv.org/abs/2506.05339)
 
 ```bibtex
-@InProceedings{,
-  title     = {Flattery, Fluff, and Fog: Diagnosing and Mitigating Idiosyncratic Biases in Preference Models},
-  author    = {Anirudh Bharadwaj and Chaitanya Malaviya and Nitish Joshi and Mark Yatskar},
-  booktitle = {arXiv},
-  year      = {2025},
-  url       = {https://arxiv.org/abs/2506.05339}
+@article{bharadwaj2025flattery,
+  title={Flattery, Fluff, and Fog: Diagnosing and Mitigating Idiosyncratic Biases in Preference Models},
+  author={Bharadwaj, Anirudh and Malaviya, Chaitanya and Joshi, Nitish and Yatskar, Mark},
+  journal={arXiv preprint arXiv:2506.05339},
+  year={2025},
+  archivePrefix={arXiv},
+  eprint={2506.05339},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2506.05339}
 }
 ```
