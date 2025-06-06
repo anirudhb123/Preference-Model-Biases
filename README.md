@@ -62,7 +62,7 @@ For detailed CDA pipeline usage and fine-tuning instructions, see [`main/README.
 
 ## Paper and citation
 
-You can find the arXiv paper here.
+You can find the arXiv paper [here](https://arxiv.org/abs/2506.05339)
 
 ```bibtex
 @InProceedings{,
@@ -70,6 +70,6 @@ You can find the arXiv paper here.
   author    = {Anirudh Bharadwaj and Chaitanya Malaviya and Nitish Joshi and Mark Yatskar},
   booktitle = {arXiv},
   year      = {2025},
-  url       = {},
+  url       = {https://arxiv.org/abs/2506.05339}
 }
 ```
